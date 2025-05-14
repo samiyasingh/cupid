@@ -1,0 +1,81 @@
+h1{
+    color: #B82132;
+}
+nav{
+    background-color: #B82132;
+    height: 50px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+    position: relative;
+    display: inline-block; /* Ensures image and overlay are on the same level */
+}
+
+
+
+
+.overlay-text {
+    position: absolute;
+    top: 15%; /* Adjust this for vertical alignment */
+    left: 5%; /* Adjust this for horizontal alignment */
+    right: 80%;
+    transform: scale(50%, 50%); /* Centers the text */
+    color: white;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional for better text visibility */
+    
+    
+}
+
+
+#name{
+    text-align: center;
+    font-size: large;
+}
+
+#email{
+    text-align: center;
+    font-size: large;
+}
+
+#message{
+    text-align: center;
+    font-size: large;
+}
+
+button{
+    font-size: large;
+    text-align: center;
+}
