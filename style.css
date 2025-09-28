@@ -392,6 +392,11 @@ input {
     .list{
         display: inline;
         
-}
+   }
+
+   .msg{
+        bottom: -25rem;
+        position: relative;
+    }
 
 }
