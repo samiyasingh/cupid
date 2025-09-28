@@ -1,0 +1,397 @@
+
+ body{
+    background-color: rgb(248, 217, 222);
+    overflow-x: hidden;
+}
+
+@font-face{
+    font-family: myFirstFont;
+    src: url(CaliforniaPersonalUseRegular-L37ED.ttf)
+}
+
+.cafe{
+    color: #a01c2b;
+    text-align: center;
+    font-size: xx-large;
+    
+    font-family: myFirstFont;
+    gap: 15px;
+    
+}
+
+
+.navbar{
+    height: 50px;
+    background-color:#a01c2b ;
+    text-align: center;
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: 700;  
+    transition: 2.5s ease-in-out;
+    
+}
+
+.search{
+    color: white;
+    margin-right: 2px;
+    font-size: large;
+
+}
+
+a{
+    color:white;
+    text-decoration: none;
+    font-size: large;
+    
+}
+
+.navbar a{
+    background-color: transparent;
+    border: none;
+}
+
+a:hover{
+      border: 2px solid transparent;
+}
+
+.slogan {
+    padding: 0;
+    text-align: left;
+    color: #a01c2b;
+    font-size: xx-large;
+    
+    
+    
+}
+.slogan p {
+    color: #a01c2b;
+    font-size: medium;
+    line-height: 1.2px;
+    margin-top: 0.5px;
+    font-weight: 550;
+}
+button {
+    height: 25px;
+    background-color:#a01c2b ;
+    border: none;
+    border-radius:5px ;
+    color: white;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3), 
+    -3px -3px 5px rgba(249, 4, 4, 0.311);
+}
+button:hover{
+    background-color: #831a27;
+}
+.options {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    max-width:100%; /* Adjust as needed */
+    color: #a01c2b;
+    margin: auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.men-btn {
+    background-color: #a01c2b;
+    color: white;
+    font-size: 16px;
+    border: none;
+    height: 25px;
+    cursor: pointer;
+    margin-top: 10px;
+    
+}
+.top-bar {
+    display: flex;
+    justify-content: space-between; /* Pushes items to opposite corners */
+    border-bottom: 1px solid #ddd;
+    width: 100%; 
+}
+
+.menu{
+display: block;
+
+}
+
+.card{
+    height: 200px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    overflow:hidden;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.text-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(241, 199, 199, 0.897); /* Semi-transparent background */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.card2{
+    height: 200px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    overflow:hidden;
+}
+
+
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.text-overlay2 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background:  rgba(241, 199, 199, 0.897); /* Semi-transparent background */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+.container2{
+    display: flex;
+    justify-content: space-evenly;
+    color: #a01c2b;
+}
+.men-btn2 {
+    background-color: #a01c2b;
+    color: white;
+    font-size: 16px;
+    border: none;
+    height: 25px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.option2 {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    max-width:100%; /* Adjust as needed */
+    color: #a01c2b;
+    margin: auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+.card3{
+    height: 350px;
+    width: 400px;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    overflow:hidden;
+}
+.card3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 70px;
+    object-position: center top;
+}
+
+.text-overlay3 {
+    position: absolute;
+    top: 10%; /* Center vertically */
+    left: 15%; /* Center horizontally */
+    color: #a01c2b;
+    
+    font-size: 25px;
+    font-weight: bold;
+    
+    border-radius: 5px;
+    text-align: center;
+}
+.input-container {
+    position: absolute;
+    bottom: 15%; /* Position input near the bottom */
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    right: 15%;
+    gap: 10px;
+    padding: 10px;
+    border: none;
+}
+
+input {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    border: none;
+}
+.message {
+    height: 45px;
+    width: 100%;
+    
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    border: none;
+}
+.submit{
+    width: 30%;
+    height: 25px;
+    background-color:#a01c2b ;
+    border: none;
+    border-radius:5px ;
+    color: white;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3), 
+    -3px -3px 5px rgba(216, 17, 17, 0.33);
+    text-align: center;
+}
+.sticker {
+    position: relative;
+    top: 100px;   
+    left: 50px;   
+    width: 100px; 
+    height: auto;
+    z-index: 999; 
+    
+}
+
+.sticker1 {
+    display: flex;
+    align-items:normal;/* Align feedback & sticker vertically */
+    justify-content: end; /* Center them */
+    gap: 20px; /* Space between feedback and sticker */
+    margin-top: -400px; /* Move it down */
+}
+
+.sticker {
+    width: 300px; /* Adjust size */
+    height: auto;
+    position: relative; /* Keeps it in normal flow */
+    
+}
+
+
+.logo {
+    width: 200px; /* Adjust size */
+    height: auto;
+
+}
+.foot{
+    background-color: pink;
+    margin-top: 30px;
+    height: 600px;
+    color: #a01c2b;
+    padding: 20px 15px;
+    
+}
+.end{
+    font-family: myFirstFont;
+    display: flex;
+    
+}
+.logo2{
+    width: 100px;
+    height: auto;
+}
+.copyright{
+    font-family: 'Courier New', Courier, monospace;
+    display: block;
+    margin-top: 60px;
+    margin-left: -200px;
+}
+.cafe-title{
+    display: block;
+}
+.company{
+    /* margin-top: -45px;
+    margin-left: 400px; */
+    font-size: large;
+    
+}
+.contact{
+    /* margin-top: -190px;
+    margin-left:600px ; */
+    font-size: large;
+}
+.list{
+    display: flex;
+    gap: 25px;
+    margin-top: -80px;
+    margin-left: 400px; 
+    font-size: large;
+    list-style-type:none;
+}
+.social{
+    display:flex;
+    font-size: large;
+    margin-bottom: 100px;
+    gap: 10px;
+   
+}
+.add-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #e91e63;
+  color: white;
+  border: #831a27;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.add-btn:hover {
+  background-color: #c2185b;
+}
+
+@media (max-width: 600px){
+    .sticker{
+        display: none;
+    }
+
+    .foot{
+         margin-top: 400px;
+         height: 1000px;
+    }
+
+    .list{
+        display: inline;
+        
+}
+
+}

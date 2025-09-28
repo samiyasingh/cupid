@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cupid's Cafe n Petals</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />"
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="cafe">
+            <img src="gwen.png"alt="logo" class="logo">
+            <h1>Cupid's Cafe n petals</h1>
+        </div>
+        <div>
+        <nav class="navbar">
+            <div class="home">
+                <i class="fa-solid fa-house"style="color:white"></i>
+                <a href="#home" >Home</a>
+            
+            </div>
+            
+            <div class="flowers">
+            <a href="http://127.0.0.1:5500/items.html">Flowers & Food</a>
+            </div> 
+
+            
+
+            
+
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Search
+            </div>
+
+            
+        </nav>
+        </div>
+
+        
+        
+        <div class="slogan">
+            <h1>Eat More, <br>
+                Love More.</h1>
+            <p>Your date night at your comfort place &hearts; </p>
+            <a href="items.html">
+                <button type="button">Order Now</button>
+            </a>
+        </div>
+
+        <div class="options">
+            <div class="top-bar">
+            
+        
+            
+                <h2>Our Food Menu</h2>
+                <a href="http://127.0.0.1:5500/food.html">
+                    <button class="men-btn">See all</button>
+                </a>
+            </div>
+            <br>
+                <div class="container">
+                    <div class="card">
+                        <img src="pizza (1).jpg" alt="pizza"/>
+                        <div class="text-overlay">Pizza</div>
+                        
+                    </div>
+                    <div class="card">
+                        <img src="burger.jpg" alt="burger"/>
+                        <div class="text-overlay">Burger</div>
+                        
+                    </div>
+                    <div class="card">
+                        <img src="momos.jpg" alt="momos"/>
+                        <div class="text-overlay">Dumplings</div>
+                        
+                
+                    </div>
+                    <div class="card">
+                        <img src="Eggs Benedict.jpg" alt="eggs "/>
+                        <div class="text-overlay">Eggs Benedict</div>
+                        
+                    </div>
+                    <div class="card">
+                        <img src="Alio Olio.jpg" alt="Pasta"/>
+                        <div class="text-overlay">Alio Olio</div>
+                        
+                    </div>
+                </div>
+        </div>
+
+        <div class="option2">
+            <div class="top-bar2">
+            
+        
+            
+                <h2>Fresh Flowers</h2>
+                <a href="http://127.0.0.1:5500/flowers.html">
+                    <button class="men-btn2">See all</button>
+                </a>
+            </div>
+            <br>
+                <div class="container2">
+                    <div class="card2">
+                        <img src="lilies.jpg" alt="lily"/>
+                        <div class="text-overlay2">Lilies</div>
+                        
+                    </div>
+                    <div class="card2">
+                        <img src="rose.jpg" alt="rose"/>
+                        <div class="text-overlay2">Rose</div>
+                        
+                    </div>
+                    <div class="card2">
+                        <img src="sunflower.jpg" alt="sunflower"/>
+                        <div class="text-overlay2">Sunflower</div>
+                        
+                    </div>
+                    <div class="card2">
+                        <img src="signature.jpg" alt="mix"/>
+                        <div class="text-overlay2">Cupid </div>
+                        
+                    </div>
+                
+
+        <div>
+            <h1>All you need is Food and Flowers</h1>
+            <p>Get your favourite food and flowers <br>
+            deliverd straight at your door.</p>
+            <input type="text" id="city" name="city" placeholder="Enter your City">
+            <br>
+            <br>
+            <button type="button" onclick="checkCity()">Find Food</button>
+            <p id="city-response"></p>
+        </div>
+
+            </div>
+
+            <form id="feedback-form">
+                <div class="container3">
+                    <div class="card3">
+                        <img src="feedback2.jpg" alt="feedback"/>
+                        <h1 class="text-overlay3">Write to Us...</h1>
+                        <div class="input-container">
+                          <input type="text" id="name" name="name" placeholder="Enter your name" >
+               
+                          <input type="text" id="email" name="email" placeholder="Enter your email" >
+                
+                          <textarea class="message" type="text" id="msg" name="msg" placeholder="Enter your message" ></textarea>
+                          <button class="submit" type="submit">Submit</button>
+                    
+                        </div>
+              
+                 
+
+                    </div>
+                       
+           
+
+                </div>
+
+            </form>
+               
+                <div class="sticker1">
+                    <img src="spoon1.png" alt="Sticker" class="sticker">
+                    <img src="spoon2.png" alt="spoon" class="sticker">
+                    <img src="spoon3.png" alt="spoon" class="sticker">
+
+                </div>
+            <br>
+            <br>
+            <p id="response"></p>
+        
+        <footer>
+            <div class="foot">
+                <div class="end">
+                    <img src="gwen.png"alt="logo2" class="logo2">
+                    <h2 class="cafe-title" >Cupid's Cafe n petals</h2>
+                    <p class="copyright">© 2025 Cupid Limited</p>
+                </div>
+                    <p>Crafted with &hearts;<br>
+                    by Samiya </p>
+
+                     <div class="list">
+                            <div class="company">
+                                <b>Company</b>
+                                <br>
+                                <br>
+                                <li>About Us</li>
+                                <br>
+                                <li>Cupid Corporate</li>
+                                <br>
+                                <li>Careers</li>
+                                <br>
+                                <li>Team</li>
+                            </div>
+                            <div class="contact">
+                                <b>Contact us</b>
+                                <br>
+                                <br>
+                                <li>Help & Support</li>
+                                <br>
+                                <li>Partner With Us</li>
+                                <br>
+                                <li>Ride With Us</li>
+                            </div>
+                            <div class="legal">
+                                <b>Legal</b>
+                                <br>
+                                <br>
+                                <li>Terms & Condition</li>
+                                <br>
+                                <li>Cookie Policy</li>
+                                <br>
+                                <li>Privacy Policy</li>
+                            </div>
+                            <div class="cities">
+                                <b>Available in</b>
+                                <br>
+                                <br>
+                                <li>Lucknow</li>
+                                <br>
+                                <li>Bangalore</li>
+                                <br>
+                                <li>Delhi</li>
+                            </div>
+                            <div class="Life">
+                                <b>Life at Cupid</b>
+                                <br>
+                                <br>
+                                <li>Explore With Cupid</li>
+                                <br>
+                                <li>Cupid News </li>
+                                <br>
+                                <li>Snackables</li>
+                            
+                            
+                            
+
+                    
+                    
+                </div>
+ 
+
+
+            </div>
+
+
+            <div class="social">
+                    
+                <b>Socials</b>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-solid fa-envelope"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-pinterest"></i>
+        </div>
+        </footer>
+
+
+
+
+        
+        
+
+
+    </header>
+    <script>
+        
+        const form = document.getElementById('feedback-form');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const msgInput = document.getElementById('msg');
+        const responseParagraph = document.getElementById('response');  
+
+
+        form.addEventListener('submit', function(event) {
+        event.preventDefault();  // Prevent the default form submission behavior
+
+        const name = nameInput.value;
+        const email = emailInput.value;
+        const msg = msgInput.value;
+
+        // Display feedback on the page
+        responseParagraph.innerHTML = `
+        <strong>Thank you for your feedback!</strong><br>
+        <strong>Name:</strong> ${name}<br>
+        <strong>Email:</strong> ${email}<br>
+        <strong>Message:</strong> ${msg}
+      `;
+
+    
+        form.reset();
+        });
+        function checkCity() {
+        const cityInput = document.getElementById('city').value.trim().toLowerCase();
+        const response = document.getElementById('city-response');
+
+        const availableCities = ['lucknow', 'bangalore', 'delhi'];  
+
+        if (cityInput === '') {
+            response.innerHTML = '<span style="color:red;">Please enter a city.</span>';
+        } else if (availableCities.includes(cityInput)) {
+            response.innerHTML = `<strong>Great news!</strong> We deliver in <b>${cityInput.charAt(0).toUpperCase() + cityInput.slice(1)}</b>! 🚚🌸🍕`;
+        } else {
+            response.innerHTML = `<span style="color:orange;">Sorry, we're not available in <b>${cityInput}</b> yet.</span>`;
+        }
+     }
+        function addToCart(itemName) {
+            alert(`${itemName} added to cart! 🛒`);
+        }
+
+
+    </script>
+
+</body>
+</html>
+ 

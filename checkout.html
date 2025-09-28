@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout | Cupid's Cafe</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #f8d9de;
+      padding: 20px;
+      color: #a01c2b;
+    }
+    .logo{
+        max-width: 200px;
+        margin: auto;
+        display: block;
+        
+    }
+    .checkout-container {
+      max-width: 600px;
+      margin: auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-family: 'myFirstFont', cursive;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 15px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      background-color: #a01c2b;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      margin-top: 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #831a27;
+    }
+
+    @font-face {
+      font-family: myFirstFont;
+      src: url('CaliforniaPersonalUseRegular-L37ED.ttf');
+    }
+
+    @media (max-width: 600px) {
+      .checkout-container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cafe">
+            <img src="gwen.png"alt="logo" class="logo">
+  <div class="checkout-container">
+    <h2>Checkout - Cupid's Cafe</h2>
+
+    <form>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+      <label for="address">Delivery Address</label>
+      <textarea id="address" placeholder="Street, City, Pincode" required></textarea>
+
+      <label for="payment">Payment Method</label>
+      <select id="payment" required>
+        <option value="">Select</option>
+        <option value="cod">Cash on Delivery</option>
+        <option value="upi">UPI</option>
+        <option value="card">Debit/Credit Card</option>
+      </select>
+       <a href="http://127.0.0.1:5500/placed.html">
+            <button class="btn" type="button">Place Order</button>
+       </a>
+    </form>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Items - Cupid's Cafe n Petals</title>
+  <link rel="stylesheet" href="food.css" />
+  
+
+</head>
+<body>
+  
+  <div class="cafe">
+      <a href="http://127.0.0.1:5500/index.html">
+      <img src="gwen.png"alt="logo" class="logo">
+      </a>
+      <a href="http://127.0.0.1:5500/cart.html">
+      <img src="cart.png"alt="cart" class="cart">
+      </a>
+      <h1>Menu</h1>
+      
+    </div>
+  <div class="items-container">
+    <!-- Item Cards -->
+    <!-- Example Card -->
+    <div class="item-card">
+      <img src="pizza (1).jpg" alt="Pizza">
+      <div class="item-name">Pizza</div>
+      <div class="item-price">₹199</div>
+      <div class="qty-wrapper">
+        <button class="qty-btn" onclick="changeQuantity(this, -1)">−</button>
+        <span class="qty-count">0</span>
+        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+      </div>
+      <button class="add-btn" onclick="addToCart('Pizza', this)">Add</button>
+    </div>
+    <!-- Duplicate for each item -->
+    <div class="item-card">
+      <img src="burger.jpg" alt="Burger">
+      <div class="item-name">Burger</div>
+      <div class="item-price">₹149</div>
+      <div class="qty-wrapper">
+        <button class="qty-btn" onclick="changeQuantity(this, -1)">−</button>
+        <span class="qty-count">0</span>
+        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+      </div>
+      <button class="add-btn" onclick="addToCart('Burger', this)">Add</button>
+    </div>
+    <div class="item-card">
+      <img src="momos.jpg" alt="Dumplings">
+      <div class="item-name">Dumplings</div>
+      <div class="item-price">₹99</div>
+      <div class="qty-wrapper">
+        <button class="qty-btn" onclick="changeQuantity(this, -1)">−</button>
+        <span class="qty-count">0</span>
+        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+      </div>
+      <button class="add-btn" onclick="addToCart('Dumplings', this)">Add</button>
+    </div>
+    <div class="item-card">
+      <img src="Eggs Benedict.jpg" alt="Eggs Benedict">
+      <div class="item-name">Eggs Benedict</div>
+      <div class="item-price">₹179</div>
+      <div class="qty-wrapper">
+        <button class="qty-btn" onclick="changeQuantity(this, -1)">−</button>
+        <span class="qty-count">0</span>
+        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+      </div>
+      <button class="add-btn" onclick="addToCart('Eggs Benedict', this)">Add</button>
+    </div>
+    <div class="item-card">
+      <img src="Alio Olio.jpg" alt="Alio Olio">
+      <div class="item-name">Alio Olio</div>
+      <div class="item-price">₹189</div>
+      <div class="qty-wrapper">
+        <button class="qty-btn" onclick="changeQuantity(this, -1)">−</button>
+        <span class="qty-count">0</span>
+        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+      </div>
+      <button class="add-btn" onclick="addToCart('Alio Olio', this)">Add</button>
+    </div>
+
+
+ <script>
+    
+        let cart = JSON.parse(localStorage.getItem('cart')) || {};
+
+        function changeQuantity(button, delta) {
+            const span = button.parentElement.querySelector('.qty-count');
+            let count = parseInt(span.innerText);
+            count += delta;
+            if (count < 0) count = 0;
+            span.innerText = count;
+        }
+
+        function addToCart(itemName, btn) {
+            const parentCard = btn.closest('.item-card');
+            const quantity = parseInt(parentCard.querySelector('.qty-count').innerText);
+            const priceText = parentCard.querySelector('.item-price').innerText.replace('₹', '').trim();
+            const price = parseFloat(priceText);
+
+        if (quantity > 0) {
+            cart[itemName] = { quantity, price };
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            btn.textContent = "Added ✓";
+            btn.disabled = true;
+            setTimeout(() => {
+                btn.textContent = "Add";
+                btn.disabled = false;
+            }, 1500);
+        }
+      }
+
+
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Items - Cupid's Cafe n Petals</title>
+  <link rel="stylesheet" href="flowers.css" />
+  
+
+</head>
+<body>
+  
+  <div class="cafe">
+      <a href="http://127.0.0.1:5500/index.html">
+      <img src="gwen.png"alt="logo" class="logo">
+      </a>
+      <a href="http://127.0.0.1:5500/cart.html">
+      <img src="cart.png"alt="cart" class="cart">
+      </a>
+      <h1>Menu</h1>
+      
+    </div>
+  <div class="items-container">
+    <!-- Item Cards -->
+    <!-- Example Card -->
+    
+    <div class="item-card">
+      <img src="rose.jpg" alt="Rose">
+      <div class="item-name">Rose Bouquet</div>
+      <div class="item-price">₹299</div>
+      <div class="qty-wrapper">
+        <button class="qty-btn" onclick="changeQuantity(this, -1)">−</button>
+        <span class="qty-count">0</span>
+        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+      </div>
+      <button class="add-btn" onclick="addToCart('Rose Bouquet', this)">Add</button>
+    </div>
+    <div class="item-card">
+      <img src="lilies.jpg" alt="Lilies">
+      <div class="item-name">Lilies</div>
+      <div class="item-price">₹249</div>
+      <div class="qty-wrapper">
+        <button class="qty-btn" onclick="changeQuantity(this, -1)">−</button>
+        <span class="qty-count">0</span>
+        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+      </div>
+      <button class="add-btn" onclick="addToCart('Lilies', this)">Add</button>
+    </div>
+    <div class="item-card">
+      <img src="sunflower.jpg" alt="Sunflower">
+      <div class="item-name">Sunflower</div>
+      <div class="item-price">₹199</div>
+      <div class="qty-wrapper">
+        <button class="qty-btn" onclick="changeQuantity(this, -1)">−</button>
+        <span class="qty-count">0</span>
+        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+      </div>
+      <button class="add-btn" onclick="addToCart('Sunflower', this)">Add</button>
+    </div>
+    <div class="item-card">
+      <img src="signature.jpg" alt="Cupid Signature">
+      <div class="item-name">Cupid Signature</div>
+      <div class="item-price">₹349</div>
+      <div class="qty-wrapper">
+        <button class="qty-btn" onclick="changeQuantity(this, -1)">−</button>
+        <span class="qty-count">0</span>
+        <button class="qty-btn" onclick="changeQuantity(this, 1)">+</button>
+      </div>
+      <button class="add-btn" onclick="addToCart('Cupid Signature', this)">Add</button>
+    </div>
+  </div>
+
+  <script>
+    
+        let cart = JSON.parse(localStorage.getItem('cart')) || {};
+
+        function changeQuantity(button, delta) {
+            const span = button.parentElement.querySelector('.qty-count');
+            let count = parseInt(span.innerText);
+            count += delta;
+            if (count < 0) count = 0;
+            span.innerText = count;
+        }
+
+        function addToCart(itemName, btn) {
+            const parentCard = btn.closest('.item-card');
+            const quantity = parseInt(parentCard.querySelector('.qty-count').innerText);
+            const priceText = parentCard.querySelector('.item-price').innerText.replace('₹', '').trim();
+            const price = parseFloat(priceText);
+
+        if (quantity > 0) {
+            cart[itemName] = { quantity, price };
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            btn.textContent = "Added ✓";
+            btn.disabled = true;
+            setTimeout(() => {
+                btn.textContent = "Add";
+                btn.disabled = false;
+            }, 1500);
+        }
+      }
+
+
+    </script>
+</body>
+</html>
+
