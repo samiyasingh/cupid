@@ -83,4 +83,13 @@ h1 {
   border: none;
   cursor: pointer;
 }
+@media (max-width: 600px){
+  .cart{
+    width: 70px; /* Adjust size */
+    height: auto;
+    margin-left: 25rem ;
+    top: -5rem;
+    position: relative;
+}
 
+}
