@@ -80,7 +80,11 @@ h1 {
 
 @media (max-width: 600px){
   .cart{
-      margin-left: 22rem;
-      margin-top: -16rem;
-  }
+    width: 70px; /* Adjust size */
+    height: auto;
+    margin-left: 25rem ;
+    top: -5rem;
+    position: relative;
+}
+
 }
