@@ -84,17 +84,3 @@ h1 {
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  .logo {
-    width: 60px;
-  }
-  .cart {
-    width: 50px;
-  }
-  h1 {
-    font-size: 40px;
-  }
-  .item-card {
-    width: 90%;
-  }
-}
