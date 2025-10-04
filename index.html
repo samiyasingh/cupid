@@ -150,7 +150,7 @@
                           <input type="text" id="email" name="email" placeholder="Enter your email" >
                 
                           <input class="message" type="text" id="msg" name="msg" placeholder="Enter your message" >
-                          <button class="submit" type="button" id="response" onclick="event()" >Submit</button>
+                          <button class="submit" type="button" onclick="event()" >Submit</button>
                     
                         </div>
               
@@ -278,19 +278,20 @@
 
 
         form.addEventListener('submit', function(event) {
-        event.preventDefault();  // Prevent the default form submission behavior
+             event.preventDefault();  // Prevent the default form submission behavior
 
-        const name = nameInput.value;
-        const email = emailInput.value;
-        const msg = msgInput.value;
+              const name = nameInput.value;
+              const email = emailInput.value;
+              const msg = msgInput.value;
 
-        // Display feedback on the page
-        responseParagraph.innerHTML = `
-        <strong>Thank you for your feedback!</strong><br>
-        <strong>Name:</strong> ${name}<br>
-        <strong>Email:</strong> ${email}<br>
-        <strong>Message:</strong> ${msg}
-      `;
+              // Display feedback on the page
+              responseParagraph.innerHTML = `
+                  <strong>Thank you for your feedback!</strong><br>
+                  <strong>Name:</strong> ${name}<br>
+                  <strong>Email:</strong> ${email}<br>
+                  <strong>Message:</strong> ${msg}
+                `;
+             });
 
     
         form.reset();
