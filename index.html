@@ -150,7 +150,7 @@
                           <input type="text" id="email" name="email" placeholder="Enter your email" >
                 
                           <input class="message" type="text" id="msg" name="msg" placeholder="Enter your message" >
-                          <button class="submit" type="button" onclick="event()" >Submit</button>
+                          <button class="submit" type="submit">Submit</button>
                     
                         </div>
               
@@ -172,7 +172,7 @@
                 </div>
             <br>
             <br>
-            <p class="msg"></p>
+            <p class="msg id="response-text"></p>
         
         <footer>
             <div class="foot">
@@ -274,7 +274,7 @@
         const nameInput = document.getElementById('name');
         const emailInput = document.getElementById('email');
         const msgInput = document.getElementById('msg');
-        const responseParagraph = document.getElementById('response');  
+        const responseParagraph = document.getElementById('response-text');  
 
 
         form.addEventListener('submit', function(event) {
