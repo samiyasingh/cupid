@@ -85,7 +85,7 @@
                         
                     </div>
                     <div class="card">
-                        <img src="alio olio.jpg" alt="Pasta"/>
+                        <img src="alio olio.jpeg" alt="Pasta"/>
                         <div class="text-overlay">Alio Olio</div>
                         
                     </div>
@@ -99,7 +99,7 @@
             
                 <h2>Fresh Flowers</h2>
                 <a href="flowers.html">
-                    <button class="men-btn2" type ="button">See all</button>
+                    <button class="men-btn2" type="button">See all</button>
                 </a>
             </div>
             <br>
@@ -149,8 +149,9 @@
                
                           <input type="text" id="email" name="email" placeholder="Enter your email" >
                 
-                          <input class="message" type="text" id="msg" name="msg" placeholder="Enter your message" >
+                          <input class="message" type="text" id="msg" name="msg" onclick= "event()"placeholder="Enter your message" >
                           <button class="submit" type="submit">Submit</button>
+                          
                     
                         </div>
               
@@ -172,7 +173,7 @@
                 </div>
             <br>
             <br>
-            <p class="msg id="response-text"></p>
+            <p class="msg" id="response-text"></p>
         
         <footer>
             <div class="foot">
@@ -276,26 +277,23 @@
         const msgInput = document.getElementById('msg');
         const responseParagraph = document.getElementById('response-text');  
 
-
         form.addEventListener('submit', function(event) {
-             event.preventDefault();  // Prevent the default form submission behavior
+            event.preventDefault();  // Prevent default form submission
 
-              const name = nameInput.value;
-              const email = emailInput.value;
-              const msg = msgInput.value;
+            const name = nameInput.value.trim();
+            const email = emailInput.value.trim();
+            const msg = msgInput.value.trim();
 
-              // Display feedback on the page
-              responseParagraph.innerHTML = `
-                  <strong>Thank you for your feedback!</strong><br>
-                  <strong>Name:</strong> ${name}<br>
-                  <strong>Email:</strong> ${email}<br>
-                  <strong>Message:</strong> ${msg}
-                `;
-             });
+            responseParagraph.innerHTML = `
+                <strong>Thank you for your feedback!</strong><br>
+                <strong>Name:</strong> ${name}<br>
+                <strong>Email:</strong> ${email}<br>
+                <strong>Message:</strong> ${msg}
+            `;
 
-    
-        form.reset();
+            form.reset();
         });
+        
         function checkCity() {
         const cityInput = document.getElementById('city').value.trim().toLowerCase();
         const response = document.getElementById('city-response');
@@ -319,4 +317,5 @@
 
 </body>
 </html>
+ 
  
