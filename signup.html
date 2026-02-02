@@ -33,10 +33,10 @@
     </div>
 
     <script>
-      const signupForm = document.getElementById("signupForm");
-      const signupMessage = document.getElementById("signupMessage");
+      const form = document.getElementById("signupForm");
+      const message = document.getElementById("message");
 
-      signupForm.addEventListener("submit", async (e) => {
+      form.addEventListener("submit", async (e) => {
         e.preventDefault();
 
         const name = document.getElementById("name").value;
@@ -54,22 +54,19 @@
 
           const data = await res.json();
 
-          if (!res.ok) {
-            signupMessage.style.color = "red";
-            signupMessage.innerText = data.message;
-            return;
+          if (res.ok) {
+            message.style.color = "green";
+            message.innerText = "Signup successful! Redirecting...";
+            setTimeout(() => {
+              window.location.href = "login.html";
+            }, 1500);
+          } else {
+            message.style.color = "red";
+            message.innerText = data.message || "Signup failed";
           }
-
-          signupMessage.style.color = "green";
-          signupMessage.innerText =
-            "Signup successful! Redirecting to login...";
-
-          setTimeout(() => {
-            window.location.href = "login.html";
-          }, 1500);
         } catch (error) {
-          signupMessage.style.color = "red";
-          signupMessage.innerText = "Server error. Try again later.";
+          message.style.color = "red";
+          message.innerText = "Server error. Try again later.";
         }
       });
     </script>
